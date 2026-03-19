@@ -7,7 +7,9 @@
 
 <p>Software developer based in Melbourne, Australia.</p>
 
-<ButtonLink href="mailto:hello@jason-n.com" icon={faEnvelope} variant="primary">Contact me</ButtonLink>
+<ButtonLink href="mailto:hello@jason-n.com" icon={faEnvelope} variant="primary"
+	>Contact me</ButtonLink
+>
 
 <p>
 	I work on the open source constraint modelling language <a href="https://www.minizinc.org"

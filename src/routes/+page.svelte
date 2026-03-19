@@ -1,6 +1,8 @@
 <script>
 	import Bio from '$lib/Bio.svelte';
 	import Landing from '$lib/Landing.svelte';
+
+	let { data } = $props();
 </script>
 
 <main>
@@ -14,12 +16,12 @@
 	</div>
 </main>
 
-<footer>&copy; 2024 Jason Nguyen</footer>
+<footer>&copy; {data.year} Jason Nguyen</footer>
 
 <style>
-    main {
-        padding: 1rem 0;
-    }
+	main {
+		padding: 1rem 0;
+	}
 
 	.columns {
 		display: flex;

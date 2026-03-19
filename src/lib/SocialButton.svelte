@@ -2,22 +2,17 @@
 	import Fa from 'svelte-fa';
 
 	/**
-	 * @type {import("@fortawesome/fontawesome-common-types").IconDefinition}
+	 * @typedef {Object} Props
+	 * @property {import("@fortawesome/fontawesome-common-types").IconDefinition} icon
+	 * @property {string} name
+	 * @property {string} href
 	 */
-	export let icon;
 
-	/**
-	 * @type {string}
-	 */
-	export let name;
-
-	/**
-	 * @type {string}
-	 */
-	export let href;
+	/** @type {Props} */
+	let { icon, name, href } = $props();
 </script>
 
-<a class="social-button" title={name} {href}>
+<a class="social-button" title={name} {href} rel="external">
 	<Fa {icon} />
 </a>
 

@@ -2,24 +2,22 @@
 	import Fa from 'svelte-fa';
 
 	/**
-	 * @type {string}
+	 * @typedef {Object} Props
+	 * @property {string} href
+	 * @property {import("@fortawesome/fontawesome-common-types").IconDefinition} icon
+	 * @property {string} [variant]
+	 * @property {import('svelte').Snippet} [children]
 	 */
-	export let href;
 
-	/**
-	 * @type {import("@fortawesome/fontawesome-common-types").IconDefinition}
-	 */
-	export let icon;
+	/** @type {Props} */
+	let { href, icon, variant = 'normal', children } = $props();
 
-	/**
-	 * @type {string}
-	 */
-	export let variant = 'normal';
+	const children_render = $derived(children);
 </script>
 
-<a class="button-link" class:is-primary={variant === 'primary'} {href}>
+<a class="button-link" class:is-primary={variant === 'primary'} {href} rel="external">
 	<span class="icon"><Fa {icon} /></span>
-	<span><slot /></span>
+	<span>{@render children_render?.()}</span>
 </a>
 
 <style>

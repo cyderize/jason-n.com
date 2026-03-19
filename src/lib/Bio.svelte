@@ -39,9 +39,9 @@
 		object-fit: cover;
 	}
 
-    .socials {
-        padding-top: 1rem;
-    }
+	.socials {
+		padding-top: 1rem;
+	}
 
 	@media (max-width: 960px) {
 		.wrapper {
